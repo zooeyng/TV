@@ -22,7 +22,7 @@ function startTime(){
 	var s=today.getSeconds();
 	m=checkTime(m);
 	s=checkTime(s);
-	document.getElementById('time').innerHTML=h+":"+m+":"+s+" CCTV 1 ";
+	document.getElementById('time').innerHTML=h+":"+m+":"+s+" 澳視澳門 ";
 	t=setTimeout(function(){startTime()},500);
 }
 function checkTime(i){
@@ -45,7 +45,7 @@ function checkTime(i){
 <div id="time"; style="color:#40B3DF;font-size:40px;font-weight:bold;text-align:center;"></div>
     
     <video id="my_video_1" class="video-js vjs-default-skin" controls preload="auto" width="1276" height="718" data-setup='{}'>
-        <source src="https://pull-l3-cny.douyincdn.com/live/346376c668682d28afc0f3266ffac7fb.m3u8" type="application/x-mpegURL">
+        <source src="https://live4.tdm.com.mo/ch1/_definst_/ch1.live/playlist.m3u8" type="application/x-mpegURL">
     </video>
 	
 </body>
