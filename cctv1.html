@@ -1,52 +1,14 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>TV</title>
-	
-<style>
-	p {
-	text-align:center;
-	font-size:30px;
-	background-color:#FF66C4;	
-	color:#ffffff;
-	font-weight:bold;
-}
-</style>
-	
-<script>
-	
-function startTime(){
-	var today=new Date();
-	var h=today.getHours();
-	var m=today.getMinutes();
-	var s=today.getSeconds();
-	m=checkTime(m);
-	s=checkTime(s);
-	document.getElementById('time').innerHTML=h+":"+m+":"+s+" 澳視澳門 ";
-	t=setTimeout(function(){startTime()},500);
-}
-function checkTime(i){
-	if (i<10){
-		i="0" + i;
-	}
-	return i;
-}
-
-</script>
-	
+<title>TV</title>	
 <link href="./css/video.css" rel="stylesheet">
 <script src="./js/video.js"></script>
-<script src="./js/videojs-live.js"></script>
-	
-</head>
-	
-<body onload="startTime()">
-	
-<div id="time"; style="color:#40B3DF;font-size:40px;font-weight:bold;text-align:center;"></div>
-    
+<script src="./js/videojs-live.js"></script>	
+</head>	
+<body>
     <video id="my_video_1" class="video-js vjs-default-skin" controls preload="auto" width="1276" height="718" data-setup='{}'>
         <source src="https://live4.tdm.com.mo/ch1/_definst_/ch1.live/playlist.m3u8" type="application/x-mpegURL">
     </video>
-	
 </body>
 </html>
