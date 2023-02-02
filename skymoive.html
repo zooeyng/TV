@@ -6,9 +6,24 @@
 <script src="./js/video.js"></script>
 <script src="./js/videojs-live.js"></script>	
 </head>	
-<body>
-    <video id="my_video_1" class="video-js vjs-default-skin" controls preload="auto" width="1276" height="718" data-setup='{}'>
+<body onload="playVid()"> 
+    <video id="video1" class="video-js vjs-default-skin" controls preload="auto" width="1250" height="703" data-setup='{}'>
         <source src="http://210.210.155.37/dr9445/h/h14/index.m3u8" type="application/x-mpegURL">
     </video>
+    
+<script> 
+var myVideo=document.getElementById("video1"); 
+
+function playVid()
+{ 
+  myVideo.play(); 
+} 
+
+function pauseVid()
+{ 
+  myVideo.pause(); 
+} 
+</script> 
+          
 </body>
 </html>
