@@ -2,15 +2,27 @@
 <head>
 <meta charset="utf-8">
 <title>TV</title>
+	
+<style>
+	p {
+	text-align:center;
+	font-size:30px;
+	background-color:#FF66C4;	
+	color:#ffffff;
+	font-weight:bold;
+}
+</style>
+	
 <script>
+	
 function startTime(){
 	var today=new Date();
 	var h=today.getHours();
 	var m=today.getMinutes();
-	var s=today.getSeconds();// 在小于10的数字前加一个‘0’
+	var s=today.getSeconds();
 	m=checkTime(m);
 	s=checkTime(s);
-	document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+	document.getElementById('time').innerHTML=h+":"+m+":"+s+" CCTV 1 ";
 	t=setTimeout(function(){startTime()},500);
 }
 function checkTime(i){
@@ -19,20 +31,18 @@ function checkTime(i){
 	}
 	return i;
 }
+
 </script>
 	
-    <link href="./css/video.css" rel="stylesheet">
-    <script src="./js/video.js"></script>
-    <script src="./js/videojs-live.js"></script>
+<link href="./css/video.css" rel="stylesheet">
+<script src="./js/video.js"></script>
+<script src="./js/videojs-live.js"></script>
 	
 </head>
+	
 <body onload="startTime()">
 	
-<div id="txt"; style="color:#40B3DF;"></div>
-	
-<div>
-<span style="background-color:#B4009E;color:#ffffff;">CCTV 1</span>
-</div>
+<div id="time"; style="color:#40B3DF;font-size:40px;font-weight:bold;text-align:center;"></div>
     
     <video id="my_video_1" class="video-js vjs-default-skin" controls preload="auto" width="1276" height="718" data-setup='{}'>
         <source src="https://pull-l3-cny.douyincdn.com/live/dc1b38ea4419f7fe3ee6511e491e4e18.m3u8" type="application/x-mpegURL">
