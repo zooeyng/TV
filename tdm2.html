@@ -10,5 +10,12 @@
     <video id="my_video_1" class="video-js vjs-default-skin" controls preload="auto" width="1276" height="718" data-setup='{}'>
         <source src="https://live3.tdm.com.mo/ch4/sport_ch4.live/playlist.m3u8" type="application/x-mpegURL">
     </video>
+    
+    var myPlayer = videojs("my_video_1");
+        videojs("my_video_1").ready(function() {
+          var myPlayer = this;
+          myPlayer.play();
+        });
+    
 </body>
 </html>
