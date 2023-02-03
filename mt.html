@@ -1,0 +1,24 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>TV</title>	
+<link href="./css/video.css" rel="stylesheet">
+<script src="./js/video.js"></script>
+<script src="./js/videojs-live.js"></script>	
+</head>	
+<body onload="playVid()"> 
+    <video id="video1" class="video-js vjs-default-skin" controls preload="auto" width="1250" height="703" data-setup='{}'>
+        <source src="http://198.16.64.10:8278/asiatravel_twn/playlist.m3u8?tid=MF2F4967516549675165&ct=19225&tsum=3b56404a8f861c7fef6ac79a798e4a8c" type="application/x-mpegURL">
+    </video>
+    
+<script> 
+var myVideo=document.getElementById("video1"); 
+
+function playVid()
+{ 
+  myVideo.play(); 
+} 
+</script> 
+          
+</body>
+</html>
