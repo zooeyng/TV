@@ -1,0 +1,426 @@
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>PLAYER</title>
+<style>
+p {
+	text-align:center;
+	font-size:55px;
+	color:#FF66C4;
+	padding:40px;
+	font-weight:bold;
+}
+button {
+	text-align:center;
+	font-size:60px;
+	color: #FFFFFF;
+	font-weight:bold;
+	background-color: #FF66C4;
+}
+</style>	
+<link href="./css/video.css" rel="stylesheet">
+<script src="./js/video.js"></script>
+<script src="./js/videojs-live.js"></script>	
+</head>
+<body style="background-color:#000000">
+	
+<div id="header" style="background-color:#000000; height:500px; width:1280px; text-align:center;" align="center">
+		<p id="NU" style=" font-size:300px"></p>
+</div>
+	
+
+<div id="content" style="background-color:#000000; height:1100px; width:1280px; float:left;" align="center">	
+	<video id="myVideo" class="video-js vjs-default-skin" controls preload="auto" width="1250" height="703" data-setup='{}'>
+        <source src="" type="application/x-mpegURL">
+  </video>
+</div>
+
+<div id="footer" style="background-color:#000000;clear:both;text-align:center;height:500px;width:1280px;" align="center">		
+<button style=" height: 200px; width: 250px; " onclick="down5()">前五頁</button>
+<button style=" height: 200px; width: 250px; " onclick="down()">上一頁</button>
+<button style=" height: 200px; width: 250px; " onclick="up()">下一頁</button>
+<button style=" height: 200px; width: 250px; " onclick="up5()">後五頁</button>
+</div>
+	
+<script>
+function down(){ 
+var e,f,g,v1;
+v1= document.getElementById("myVideo");
+f = document.getElementById("NU").innerHTML;
+g = Number(f)-1;
+document.getElementById("NU").innerHTML = g;
+	switch (g){
+  		case 0:e="http://210.210.155.37/dr9445/h/h14/index.m3u8";
+    	break;
+		  case 1:e="http://hpull.kktv8.com/livekktv/128600025/playlist.m3u8";
+    	break;
+  		case 2:e="https://dje6yassknq8t.cloudfront.net/playlist720p.m3u8";
+    	break;
+		  case 3:e="http://media.fantv.hk/m3u8/archive/channel2.m3u8";
+    	break;
+  		case 4:e="https://cdn.hklive.tv/xxxx/99/index.m3u8";
+    	break;
+		  case 5:e="https://cdn.hklive.tv/xxxx/96/index.m3u8";
+    	break;
+		  case 6:e="http://live4.tdm.com.mo/ch1/_definst_/ch1.live/playlist.m3u8";
+    	break;
+  		case 7:e="https://live3.tdm.com.mo/ch4/sport_ch4.live/playlist.m3u8";
+    	break;
+		  case 8:e="https://live3.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8";
+    	break;
+  		case 9:e="http://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/stream3/streamPlaylist.m3u8";
+    	break;
+		  case 10:e="http://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/stream3/streamPlaylist.m3u8";
+    	break;
+  		case 11:e="http://1.222.207.80:1935/live/cjbtv/playlist.m3u8";
+    	break;
+		  case 12:e="http://andong.webcasting.co.kr/live/mbc/playlist.m3u8";
+    	break;
+  		case 13:e="http://123.254.72.24:1935/tvlive/livestream2/playlist.m3u8";
+    	break;
+		  case 14:e="https://kbsworld-ott.akamaized.net/hls/live/2002341/kbsworld/master.m3u8";
+    	break;
+  		case 15:e="https://fujitv2.mov3.co/hls/fujitv.m3u8";
+    	break;
+		  case 16:e="https://srv1.zcast.com.br/kpoptv/kpoptv/playlist.m3u8";
+    	break;
+  		case 17:e="https://siloh.pluto.tv/lilo/production/QwestJazz/master.m3u8";
+    	break;
+	  	case 18:e="https://d330e7137fb7fe851354fad8b25596e7.iad.linear.zype.com/out/v1/f66d9d3fb088443baf9abae38ae01fef/live.m3u8";
+    	break;
+  		case 19:e="https://cmc-ono.amagi.tv/playlist.m3u8";
+    	break;
+	  	case 20:e="https://vcnbikininetwork.teleosmedia.com/stream/bikininetwork/a3bikini/playlist.m3u8";
+    	break;
+  		case 21:e="http://fash1043.cloudycdn.services/slive/_definst_/ftv_ftv_midnite_k1y_27049_midnite_secr_108_hls.smil/media.m3u8";
+    	break;
+	  	case 22:e="https://fash2043.cloudycdn.services/slive/ftv_ftv_4k_hevc_73d_42080_default_466_hls.smil/playlist.m3u8";
+    	break;
+  		case 23:e="http://iptv.prosto.tv:7000/ch144/video.m3u8";
+    	break;
+  		case 24:e="https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/federator/46329e01-6c6a-417f-88e5-b2f0600bdbe6/2.m3u8";
+    	break;
+  		case 25:e="https://wfcint.mediacdn.ru/cdn/wfcintweb/playlist.m3u8";
+    	break;
+   		case 26:e="https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8";
+      break;
+  		case 27:e="https://tve-live-lln.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8";
+      break;
+      case 28:e="https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8";
+   	  break;
+  		case 29:e="https://live-gbnews.simplestreamcdn.com/live5/gbnews/bitrate1.isml/live.m3u8";
+    	break;
+  		case 30:e="https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8";
+    	break;
+      case 31:e="https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=30";
+    	break;
+      case 32:e="https://racingvic-i.akamaized.net/hls/live/598695/racingvic/index1500.m3u8";
+    	break;
+      case 33:e="https://vcnbikininetwork.teleosmedia.com/stream/bikininetwork/a3bikini/playlist.m3u8";
+    	break;
+      case 34:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-viziostingrayambiance/CDN/playlist.m3u8";
+    	break;
+      case 35:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayclassicrock/CDN/playlist.m3u8";
+    	break;
+      case 36:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhitlist/CDN/playlist.m3u8";
+    	break;
+      case 37:e="https://stirr.ott-channels.stingray.com/155/master.m3u8";
+    	break;
+      case 38:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhotcountry/CDN/playlist.m3u8";
+    	break;
+      case 39:e="https://dai.google.com/linear/hls/event/5bqbG8j7T_6_qMONC1SDsg/master.m3u8";
+    	break;
+ 	}
+  v1.src =e;
+ 	v1.load();
+	v1.play();
+} 
+</script>
+	
+<script>
+function up(){ 
+var e,f,g,v1;
+v1= document.getElementById("myVideo");
+f = document.getElementById("NU").innerHTML;
+g = Number(f)+1;
+document.getElementById("NU").innerHTML = g;
+	switch (g){
+  		case 0:e="http://210.210.155.37/dr9445/h/h14/index.m3u8";
+    	break;
+		  case 1:e="http://hpull.kktv8.com/livekktv/128600025/playlist.m3u8";
+    	break;
+  		case 2:e="https://dje6yassknq8t.cloudfront.net/playlist720p.m3u8";
+    	break;
+		  case 3:e="http://media.fantv.hk/m3u8/archive/channel2.m3u8";
+    	break;
+  		case 4:e="https://cdn.hklive.tv/xxxx/99/index.m3u8";
+    	break;
+		  case 5:e="https://cdn.hklive.tv/xxxx/96/index.m3u8";
+    	break;
+		  case 6:e="http://live4.tdm.com.mo/ch1/_definst_/ch1.live/playlist.m3u8";
+    	break;
+  		case 7:e="https://live3.tdm.com.mo/ch4/sport_ch4.live/playlist.m3u8";
+    	break;
+		  case 8:e="https://live3.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8";
+    	break;
+  		case 9:e="http://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/stream3/streamPlaylist.m3u8";
+    	break;
+		  case 10:e="http://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/stream3/streamPlaylist.m3u8";
+    	break;
+  		case 11:e="http://1.222.207.80:1935/live/cjbtv/playlist.m3u8";
+    	break;
+		  case 12:e="http://andong.webcasting.co.kr/live/mbc/playlist.m3u8";
+    	break;
+  		case 13:e="http://123.254.72.24:1935/tvlive/livestream2/playlist.m3u8";
+    	break;
+		  case 14:e="https://kbsworld-ott.akamaized.net/hls/live/2002341/kbsworld/master.m3u8";
+    	break;
+  		case 15:e="https://fujitv2.mov3.co/hls/fujitv.m3u8";
+    	break;
+		  case 16:e="https://srv1.zcast.com.br/kpoptv/kpoptv/playlist.m3u8";
+    	break;
+  		case 17:e="https://siloh.pluto.tv/lilo/production/QwestJazz/master.m3u8";
+    	break;
+	  	case 18:e="https://d330e7137fb7fe851354fad8b25596e7.iad.linear.zype.com/out/v1/f66d9d3fb088443baf9abae38ae01fef/live.m3u8";
+    	break;
+  		case 19:e="https://cmc-ono.amagi.tv/playlist.m3u8";
+    	break;
+	  	case 20:e="https://vcnbikininetwork.teleosmedia.com/stream/bikininetwork/a3bikini/playlist.m3u8";
+    	break;
+  		case 21:e="http://fash1043.cloudycdn.services/slive/_definst_/ftv_ftv_midnite_k1y_27049_midnite_secr_108_hls.smil/media.m3u8";
+    	break;
+	  	case 22:e="https://fash2043.cloudycdn.services/slive/ftv_ftv_4k_hevc_73d_42080_default_466_hls.smil/playlist.m3u8";
+    	break;
+  		case 23:e="http://iptv.prosto.tv:7000/ch144/video.m3u8";
+    	break;
+  		case 24:e="https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/federator/46329e01-6c6a-417f-88e5-b2f0600bdbe6/2.m3u8";
+    	break;
+  		case 25:e="https://wfcint.mediacdn.ru/cdn/wfcintweb/playlist.m3u8";
+    	break;
+   		case 26:e="https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8";
+      break;
+  		case 27:e="https://tve-live-lln.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8";
+      break;
+      case 28:e="https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8";
+   	  break;
+  		case 29:e="https://live-gbnews.simplestreamcdn.com/live5/gbnews/bitrate1.isml/live.m3u8";
+    	break;
+  		case 30:e="https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8";
+    	break;
+      case 31:e="https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=30";
+    	break;
+      case 32:e="https://racingvic-i.akamaized.net/hls/live/598695/racingvic/index1500.m3u8";
+    	break;
+      case 33:e="https://vcnbikininetwork.teleosmedia.com/stream/bikininetwork/a3bikini/playlist.m3u8";
+    	break;
+      case 34:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-viziostingrayambiance/CDN/playlist.m3u8";
+    	break;
+      case 35:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayclassicrock/CDN/playlist.m3u8";
+    	break;
+      case 36:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhitlist/CDN/playlist.m3u8";
+    	break;
+      case 37:e="https://stirr.ott-channels.stingray.com/155/master.m3u8";
+    	break;
+      case 38:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhotcountry/CDN/playlist.m3u8";
+    	break;
+      case 39:e="https://dai.google.com/linear/hls/event/5bqbG8j7T_6_qMONC1SDsg/master.m3u8";
+    	break;
+ 	}
+  v1.src =e;
+ 	v1.load();
+	v1.play();
+} 
+</script>
+	
+<script>
+function down5(){ 
+var e,f,g,v1;
+v1= document.getElementById("myVideo");
+f = document.getElementById("NU").innerHTML;
+g = Number(f)-5;
+document.getElementById("NU").innerHTML = g;
+	switch (g){
+  		case 0:e="http://210.210.155.37/dr9445/h/h14/index.m3u8";
+    	break;
+		  case 1:e="http://hpull.kktv8.com/livekktv/128600025/playlist.m3u8";
+    	break;
+  		case 2:e="https://dje6yassknq8t.cloudfront.net/playlist720p.m3u8";
+    	break;
+		  case 3:e="http://media.fantv.hk/m3u8/archive/channel2.m3u8";
+    	break;
+  		case 4:e="https://cdn.hklive.tv/xxxx/99/index.m3u8";
+    	break;
+		  case 5:e="https://cdn.hklive.tv/xxxx/96/index.m3u8";
+    	break;
+		  case 6:e="http://live4.tdm.com.mo/ch1/_definst_/ch1.live/playlist.m3u8";
+    	break;
+  		case 7:e="https://live3.tdm.com.mo/ch4/sport_ch4.live/playlist.m3u8";
+    	break;
+		  case 8:e="https://live3.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8";
+    	break;
+  		case 9:e="http://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/stream3/streamPlaylist.m3u8";
+    	break;
+		  case 10:e="http://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/stream3/streamPlaylist.m3u8";
+    	break;
+  		case 11:e="http://1.222.207.80:1935/live/cjbtv/playlist.m3u8";
+    	break;
+		  case 12:e="http://andong.webcasting.co.kr/live/mbc/playlist.m3u8";
+    	break;
+  		case 13:e="http://123.254.72.24:1935/tvlive/livestream2/playlist.m3u8";
+    	break;
+		  case 14:e="https://kbsworld-ott.akamaized.net/hls/live/2002341/kbsworld/master.m3u8";
+    	break;
+  		case 15:e="https://fujitv2.mov3.co/hls/fujitv.m3u8";
+    	break;
+		  case 16:e="https://srv1.zcast.com.br/kpoptv/kpoptv/playlist.m3u8";
+    	break;
+  		case 17:e="https://siloh.pluto.tv/lilo/production/QwestJazz/master.m3u8";
+    	break;
+	  	case 18:e="https://d330e7137fb7fe851354fad8b25596e7.iad.linear.zype.com/out/v1/f66d9d3fb088443baf9abae38ae01fef/live.m3u8";
+    	break;
+  		case 19:e="https://cmc-ono.amagi.tv/playlist.m3u8";
+    	break;
+	  	case 20:e="https://vcnbikininetwork.teleosmedia.com/stream/bikininetwork/a3bikini/playlist.m3u8";
+    	break;
+  		case 21:e="http://fash1043.cloudycdn.services/slive/_definst_/ftv_ftv_midnite_k1y_27049_midnite_secr_108_hls.smil/media.m3u8";
+    	break;
+	  	case 22:e="https://fash2043.cloudycdn.services/slive/ftv_ftv_4k_hevc_73d_42080_default_466_hls.smil/playlist.m3u8";
+    	break;
+  		case 23:e="http://iptv.prosto.tv:7000/ch144/video.m3u8";
+    	break;
+  		case 24:e="https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/federator/46329e01-6c6a-417f-88e5-b2f0600bdbe6/2.m3u8";
+    	break;
+  		case 25:e="https://wfcint.mediacdn.ru/cdn/wfcintweb/playlist.m3u8";
+    	break;
+   		case 26:e="https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8";
+      break;
+  		case 27:e="https://tve-live-lln.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8";
+      break;
+      case 28:e="https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8";
+   	  break;
+  		case 29:e="https://live-gbnews.simplestreamcdn.com/live5/gbnews/bitrate1.isml/live.m3u8";
+    	break;
+  		case 30:e="https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8";
+    	break;
+      case 31:e="https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=30";
+    	break;
+      case 32:e="https://racingvic-i.akamaized.net/hls/live/598695/racingvic/index1500.m3u8";
+    	break;
+      case 33:e="https://vcnbikininetwork.teleosmedia.com/stream/bikininetwork/a3bikini/playlist.m3u8";
+    	break;
+      case 34:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-viziostingrayambiance/CDN/playlist.m3u8";
+    	break;
+      case 35:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayclassicrock/CDN/playlist.m3u8";
+    	break;
+      case 36:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhitlist/CDN/playlist.m3u8";
+    	break;
+      case 37:e="https://stirr.ott-channels.stingray.com/155/master.m3u8";
+    	break;
+      case 38:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhotcountry/CDN/playlist.m3u8";
+    	break;
+      case 39:e="https://dai.google.com/linear/hls/event/5bqbG8j7T_6_qMONC1SDsg/master.m3u8";
+    	break;
+ 	}
+  v1.src =e;
+ 	v1.load();
+	v1.play();
+} 
+</script>
+	
+<script>
+function up5(){ 
+var e,f,g,v1;
+v1= document.getElementById("myVideo");
+f = document.getElementById("NU").innerHTML;
+g = Number(f)+5;
+document.getElementById("NU").innerHTML = g;
+	switch (g){
+  		case 0:e="http://210.210.155.37/dr9445/h/h14/index.m3u8";
+    	break;
+		  case 1:e="http://hpull.kktv8.com/livekktv/128600025/playlist.m3u8";
+    	break;
+  		case 2:e="https://dje6yassknq8t.cloudfront.net/playlist720p.m3u8";
+    	break;
+		  case 3:e="http://media.fantv.hk/m3u8/archive/channel2.m3u8";
+    	break;
+  		case 4:e="https://cdn.hklive.tv/xxxx/99/index.m3u8";
+    	break;
+		  case 5:e="https://cdn.hklive.tv/xxxx/96/index.m3u8";
+    	break;
+		  case 6:e="http://live4.tdm.com.mo/ch1/_definst_/ch1.live/playlist.m3u8";
+    	break;
+  		case 7:e="https://live3.tdm.com.mo/ch4/sport_ch4.live/playlist.m3u8";
+    	break;
+		  case 8:e="https://live3.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8";
+    	break;
+  		case 9:e="http://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/stream3/streamPlaylist.m3u8";
+    	break;
+		  case 10:e="http://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/stream3/streamPlaylist.m3u8";
+    	break;
+  		case 11:e="http://1.222.207.80:1935/live/cjbtv/playlist.m3u8";
+    	break;
+		  case 12:e="http://andong.webcasting.co.kr/live/mbc/playlist.m3u8";
+    	break;
+  		case 13:e="http://123.254.72.24:1935/tvlive/livestream2/playlist.m3u8";
+    	break;
+		  case 14:e="https://kbsworld-ott.akamaized.net/hls/live/2002341/kbsworld/master.m3u8";
+    	break;
+  		case 15:e="https://fujitv2.mov3.co/hls/fujitv.m3u8";
+    	break;
+		  case 16:e="https://srv1.zcast.com.br/kpoptv/kpoptv/playlist.m3u8";
+    	break;
+  		case 17:e="https://siloh.pluto.tv/lilo/production/QwestJazz/master.m3u8";
+    	break;
+	  	case 18:e="https://d330e7137fb7fe851354fad8b25596e7.iad.linear.zype.com/out/v1/f66d9d3fb088443baf9abae38ae01fef/live.m3u8";
+    	break;
+  		case 19:e="https://cmc-ono.amagi.tv/playlist.m3u8";
+    	break;
+	  	case 20:e="https://vcnbikininetwork.teleosmedia.com/stream/bikininetwork/a3bikini/playlist.m3u8";
+    	break;
+  		case 21:e="http://fash1043.cloudycdn.services/slive/_definst_/ftv_ftv_midnite_k1y_27049_midnite_secr_108_hls.smil/media.m3u8";
+    	break;
+	  	case 22:e="https://fash2043.cloudycdn.services/slive/ftv_ftv_4k_hevc_73d_42080_default_466_hls.smil/playlist.m3u8";
+    	break;
+  		case 23:e="http://iptv.prosto.tv:7000/ch144/video.m3u8";
+    	break;
+  		case 24:e="https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/federator/46329e01-6c6a-417f-88e5-b2f0600bdbe6/2.m3u8";
+    	break;
+  		case 25:e="https://wfcint.mediacdn.ru/cdn/wfcintweb/playlist.m3u8";
+    	break;
+   		case 26:e="https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8";
+      break;
+  		case 27:e="https://tve-live-lln.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8";
+      break;
+      case 28:e="https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8";
+   	  break;
+  		case 29:e="https://live-gbnews.simplestreamcdn.com/live5/gbnews/bitrate1.isml/live.m3u8";
+    	break;
+  		case 30:e="https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8";
+    	break;
+      case 31:e="https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=30";
+    	break;
+      case 32:e="https://racingvic-i.akamaized.net/hls/live/598695/racingvic/index1500.m3u8";
+    	break;
+      case 33:e="https://vcnbikininetwork.teleosmedia.com/stream/bikininetwork/a3bikini/playlist.m3u8";
+    	break;
+      case 34:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-viziostingrayambiance/CDN/playlist.m3u8";
+    	break;
+      case 35:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayclassicrock/CDN/playlist.m3u8";
+    	break;
+      case 36:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhitlist/CDN/playlist.m3u8";
+    	break;
+      case 37:e="https://stirr.ott-channels.stingray.com/155/master.m3u8";
+    	break;
+      case 38:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhotcountry/CDN/playlist.m3u8";
+    	break;
+      case 39:e="https://dai.google.com/linear/hls/event/5bqbG8j7T_6_qMONC1SDsg/master.m3u8";
+    	break;
+ 	}
+  v1.src =e;
+ 	v1.load();
+	v1.play();
+} 
+</script>
+
+</body>
+</html>
