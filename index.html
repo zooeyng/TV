@@ -126,12 +126,12 @@ li a:hover {
   <li><a onclick="i40()">CMC</a></li>
   <li><a onclick="i41()">JAZZ</a></li>
   <li><a onclick="i42()">Reload</a></li>
-  <li><a onclick="i43()">Radio</a></li>
+  <li><a onclick="i43()">optaha</a></li>
 	
-  <li><a onclick="i44()">Biggest</a></li>
-  <li><a onclick="i45()"></a></li>
-  <li><a onclick="i46()"></a></li>
-  <li><a onclick="i47()"></a></li>
+  <li><a onclick="i44()">MTV 1</a></li>
+  <li><a onclick="i45()">MTV 2</a></li>
+  <li><a onclick="i46()">台視新聞</a></li>
+  <li><a onclick="i47()">TVBS新聞</a></li>
 	
   <li><a onclick="i48()"></a></li>
 <li>
@@ -243,15 +243,15 @@ document.getElementById("NU").innerHTML = g;
     	break;
   		case 42:e="http://web.onair-radio.eu:1935/video/video/chunklist.m3u8";
     	break;
-                case 43:e="http://web.onair-radio.eu:1935/video/video/chunklist_w1235825277.m3u8";
+                case 43:e="http://live.stranafm.cdnvideo.ru/stranafm/stranafm_hd.sdp/chunklist.m3u8";
     	break;
                 case 44:e="http://pluto-live.plutotv.net/egress/chandler/pluto01/live/VIACBS02/master.m3u8";
     	break;
-                case 45:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-viziostingrayambiance/CDN/playlist.m3u8";
+                case 45:e="http://pluto-live.plutotv.net/egress/chandler/pluto01/live/VIACBS03/master.m3u8";
     	break;
-                case 46:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayclassicrock/CDN/playlist.m3u8";
+                case 46:e="http://38.64.72.148:80/hls/modn/list/4013/chunklist0.m3u8";
     	break;
-                case 47:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhitlist/CDN/playlist.m3u8";
+                case 47:e="http://38.64.72.148:80/hls/modn/list/4006/chunklist1.m3u8";
     	break;
                 case 48:e="https://stirr.ott-channels.stingray.com/155/master.m3u8";
     	break;
@@ -360,15 +360,15 @@ document.getElementById("NU").innerHTML = g;
     	break;
   		case 42:e="http://web.onair-radio.eu:1935/video/video/chunklist.m3u8";
     	break;
-                case 43:e="http://web.onair-radio.eu:1935/video/video/chunklist_w1235825277.m3u8";
+                case 43:e="http://live.stranafm.cdnvideo.ru/stranafm/stranafm_hd.sdp/chunklist.m3u8";
     	break;
                 case 44:e="http://pluto-live.plutotv.net/egress/chandler/pluto01/live/VIACBS02/master.m3u8";
     	break;
-                case 45:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-viziostingrayambiance/CDN/playlist.m3u8";
+                case 45:e="http://pluto-live.plutotv.net/egress/chandler/pluto01/live/VIACBS03/master.m3u8";
     	break;
-                case 46:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayclassicrock/CDN/playlist.m3u8";
+                case 46:e="http://38.64.72.148:80/hls/modn/list/4013/chunklist0.m3u8";
     	break;
-                case 47:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhitlist/CDN/playlist.m3u8";
+                case 47:e="http://38.64.72.148:80/hls/modn/list/4006/chunklist1.m3u8";
     	break;
                 case 48:e="https://stirr.ott-channels.stingray.com/155/master.m3u8";
     	break;
@@ -652,7 +652,7 @@ document.getElementById("NU").innerHTML = g;
 	}
 	function i43(){
 	document.getElementById("NU").innerHTML =43;
-	myVideo.src ='http://web.onair-radio.eu:1935/video/video/chunklist_w1235825277.m3u8';
+	myVideo.src ='http://live.stranafm.cdnvideo.ru/stranafm/stranafm_hd.sdp/chunklist.m3u8';
  	myVideo.load();
 	myVideo.play();
 	}
@@ -664,19 +664,19 @@ document.getElementById("NU").innerHTML = g;
 	}
 	function i45(){
 	document.getElementById("NU").innerHTML =45;
-	myVideo.src ='';
+	myVideo.src ='http://pluto-live.plutotv.net/egress/chandler/pluto01/live/VIACBS03/master.m3u8';
  	myVideo.load();
 	myVideo.play();
 	}
 	function i46(){
 	document.getElementById("NU").innerHTML =46;
-	myVideo.src ='';
+	myVideo.src ='http://38.64.72.148:80/hls/modn/list/4013/chunklist0.m3u8';
  	myVideo.load();
 	myVideo.play();
 	}
 	function i47(){
 	document.getElementById("NU").innerHTML =47;
-	myVideo.src ='';
+	myVideo.src ='http://38.64.72.148:80/hls/modn/list/4006/chunklist1.m3u8';
  	myVideo.load();
 	myVideo.play();
 	}
