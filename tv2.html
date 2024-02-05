@@ -81,7 +81,6 @@ li a:hover {
 <div id="footer" style="background-color:#000000;clear:both;text-align:center;height:500px;width:1280px;" align="center">		
 <button style=" height: 200px; width: 250px; " onclick="down()">上一台</button>
 <td><p id="NUA"></p></td>
-	<td><p id="NU"></p></td>
 <button style=" height: 200px; width: 250px; " onclick="up()">下一台</button>
 </div>
 
@@ -164,48 +163,56 @@ document.getElementById("NUA").innerHTML = i;
 <script>
 	function i00(){
 	document.getElementById("NU").innerHTML =0;
+	document.getElementById("NUA").innerHTML =1;
 	myVideo.src ='http://live4.tdm.com.mo/ch1/_definst_/ch1.live/playlist.m3u8';
  	myVideo.load();
 	myVideo.play();
 	}
 	function i01(){
 	document.getElementById("NU").innerHTML =1;
+		document.getElementById("NUA").innerHTML =2;
 	myVideo.src ='https://live3.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8';
  	myVideo.load();
 	myVideo.play();
 	}
 	function i02(){
 	document.getElementById("NU").innerHTML =2;
+		document.getElementById("NUA").innerHTML =3;
 	myVideo.src ='https://live3.tdm.com.mo/ch4/sport_ch4.live/playlist.m3u8';
  	myVideo.load();
 	myVideo.play();
 	}
 	function i03(){
 	document.getElementById("NU").innerHTML =3;
+		document.getElementById("NUA").innerHTML =4;
 	myVideo.src ='http://210.210.155.37/dr9445/h/h14/index.m3u8';
  	myVideo.load();
 	myVideo.play();
 	}
 	function i04(){
 	document.getElementById("NU").innerHTML =4;
+		document.getElementById("NUA").innerHTML =5;
 	myVideo.src ='http://38.64.72.148:80/hls/modn/list/4013/chunklist0.m3u8';
  	myVideo.load();
 	myVideo.play();
 	}
 	function i05(){
 	document.getElementById("NU").innerHTML =5;
+		document.getElementById("NUA").innerHTML =6;
 	myVideo.src ='http://38.64.72.148:80/hls/modn/list/4006/chunklist1.m3u8';
  	myVideo.load();
 	myVideo.play();
 	}
 	function i06(){
 	document.getElementById("NU").innerHTML =6;
+		document.getElementById("NUA").innerHTML =7;
 	myVideo.src ='https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8';
  	myVideo.load();
 	myVideo.play();
 	}
 	function i07(){
 	document.getElementById("NU").innerHTML =7;
+		document.getElementById("NUA").innerHTML =8;
 	myVideo.src ='https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8';
  	myVideo.load();
 	myVideo.play();
