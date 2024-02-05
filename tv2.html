@@ -1,0 +1,223 @@
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>TV LIST</title>
+	
+<style>
+body {
+	background-color:#000000;
+}
+
+button {
+	text-align:center;
+	font-size:55px;
+	color: #FFFFFF;
+	font-weight:bold;
+	height: 130px;
+	width: 253px;
+	background-color: #FF66C4;
+}
+	
+p {
+	text-align:center;
+	font-size:55px;
+	color:#FF66C4;
+	padding:25px;
+	font-weight:bold;
+}
+	
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #80F0FF;
+	font-weight:bold;
+    text-align: center;
+	font-size:60px;
+    height:100px;
+	width:320px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #333;
+}	
+	
+</style>
+</head>
+	
+<body onload="open()">
+
+<div id="header" style="height:600px;width:1280px;">
+<ul>
+  <li><a class="active" onclick="i00()">澳視澳門</a></li>
+  <li><a onclick="i01()">澳門資訊</a></li>
+  <li><a onclick="i02()">澳門體育</a></li>
+  <li><a onclick="i03()">天映頻道</a></li>
+	
+  <li><a onclick="i04()">台視新聞</a></li>
+  <li><a onclick="i05()">TVBS新聞</a></li>
+  <li><a onclick="i06()">CNA</a></li>
+  <li><a onclick="i07()">Fox News</a></li>
+</ul>
+	
+</div>
+
+<div id="content" style="background-color:#000000; height:720px; width:1280px; float:left;" align="center">	
+	<video id="myVideo" class="video-js vjs-default-skin" controls preload="auto" width="1250" height="703" data-setup='{}'>
+        <source src="http://210.210.155.37/dr9445/h/h14/index.m3u8" type="application/x-mpegURL">
+  </video>
+</div>
+
+<div id="footer" style="clear:both;text-align:center; width:1280px;">
+
+<ul>
+  
+<li>
+<table>
+<tr>
+  <td><button onclick="down()">上一頁</button></td>
+  <td><p id="NU"></p></td>
+  <td><button onclick="up()">下一頁</button></td>
+</tr>
+</table>
+</li>
+<li><a onclick="i49()"></a></li>	
+ 
+</ul>
+
+</div>
+
+<script>
+function down(){ 
+var e,f,g,h,v1;
+v1= document.getElementById("myVideo");
+f = document.getElementById("NU").innerHTML;
+g = Number(f)-1;
+document.getElementById("NU").innerHTML = g;
+	switch (g){
+  		        case 0:e="http://live4.tdm.com.mo/ch1/_definst_/ch1.live/playlist.m3u8";
+    	break;
+			case 1:e="https://live3.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8";
+    	break; 
+			case 2:e="https://live3.tdm.com.mo/ch4/sport_ch4.live/playlist.m3u8";
+    	break; 
+			case 3:e="http://210.210.155.37/dr9445/h/h14/index.m3u8";
+    	break; 
+			case 4:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhotcountry/CDN/playlist.m3u8";
+    	break; 
+			case 5:e="https://dai.google.com/linear/hls/event/5bqbG8j7T_6_qMONC1SDsg/master.m3u8";
+    	break; 
+			case 6:e="https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8";
+    	break; 
+			case 7:e="https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8";
+    	break; 
+ 	}
+	v1.src =e;
+ 	v1.load();
+	v1.play();
+} 
+</script>
+	
+<script>
+function up(){ 
+var e,f,g,h,v1;
+v1= document.getElementById("myVideo");
+f = document.getElementById("NU").innerHTML;
+g = Number(f)+1;
+document.getElementById("NU").innerHTML = g;
+	switch (g){
+  		        case 0:e="http://live4.tdm.com.mo/ch1/_definst_/ch1.live/playlist.m3u8";
+    	break;
+			case 1:e="https://live3.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8";
+    	break; 
+			case 2:e="https://live3.tdm.com.mo/ch4/sport_ch4.live/playlist.m3u8";
+    	break; 
+			case 3:e="http://210.210.155.37/dr9445/h/h14/index.m3u8";
+    	break; 
+			case 4:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhotcountry/CDN/playlist.m3u8";
+    	break; 
+			case 5:e="https://dai.google.com/linear/hls/event/5bqbG8j7T_6_qMONC1SDsg/master.m3u8";
+    	break; 
+			case 6:e="https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8";
+    	break; 
+			case 7:e="https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8";
+    	break; 
+ 	}
+	
+        v1.src =e;
+ 	v1.load();
+	v1.play();
+
+} 
+</script>
+	
+<script>
+	function open(){
+	document.getElementById("NU").innerHTML =0;
+	}
+</script>
+	
+<script>
+	function i00(){
+	document.getElementById("NU").innerHTML =0;
+	myVideo.src ='http://live4.tdm.com.mo/ch1/_definst_/ch1.live/playlist.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i01(){
+	document.getElementById("NU").innerHTML =1;
+	myVideo.src ='https://live3.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i02(){
+	document.getElementById("NU").innerHTML =2;
+	myVideo.src ='https://live3.tdm.com.mo/ch4/sport_ch4.live/playlist.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i03(){
+	document.getElementById("NU").innerHTML =3;
+	myVideo.src ='http://210.210.155.37/dr9445/h/h14/index.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i04(){
+	document.getElementById("NU").innerHTML =4;
+	myVideo.src ='https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhotcountry/CDN/playlist.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i05(){
+	document.getElementById("NU").innerHTML =5;
+	myVideo.src ='https://dai.google.com/linear/hls/event/5bqbG8j7T_6_qMONC1SDsg/master.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i06(){
+	document.getElementById("NU").innerHTML =6;
+	myVideo.src ='https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i07(){
+	document.getElementById("NU").innerHTML =7;
+	myVideo.src ='https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+</script>
+	
+</body>
+</html>
