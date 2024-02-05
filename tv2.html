@@ -78,23 +78,16 @@ li a:hover {
   </video>
 </div>
 
-<div id="footer" style="clear:both;text-align:center; width:1280px;" align="center">
+<div id="footer" style="background-color:#000000;clear:both;text-align:center;height:500px;width:1280px;" align="center">		
 
-<ul>
-  
-<li>
-<table>
-<tr>
-  <td><button onclick="down()">上一頁</button></td>
-  <td><p id="NU"></p></td>
-  <td><button onclick="up()">下一頁</button></td>
-</tr>
-</table>
-</li>
-</ul>
+<button style=" height: 200px; width: 250px; " onclick="down()">上一頁</button>
+
+<td><p id="NU"></p></td>	
+<button style=" height: 200px; width: 250px; " onclick="up()">下一頁</button>
 
 </div>
 
+	
 <script>
 function down(){ 
 var e,f,g,h,v1;
@@ -111,9 +104,9 @@ document.getElementById("NU").innerHTML = g;
     	break; 
 			case 3:e="http://210.210.155.37/dr9445/h/h14/index.m3u8";
     	break; 
-			case 4:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhotcountry/CDN/playlist.m3u8";
+			case 4:e="http://38.64.72.148:80/hls/modn/list/4013/chunklist0.m3u8";
     	break; 
-			case 5:e="https://dai.google.com/linear/hls/event/5bqbG8j7T_6_qMONC1SDsg/master.m3u8";
+			case 5:e="http://38.64.72.148:80/hls/modn/list/4006/chunklist1.m3u8";
     	break; 
 			case 6:e="https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8";
     	break; 
@@ -142,9 +135,9 @@ document.getElementById("NU").innerHTML = g;
     	break; 
 			case 3:e="http://210.210.155.37/dr9445/h/h14/index.m3u8";
     	break; 
-			case 4:e="https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhotcountry/CDN/playlist.m3u8";
+			case 4:e="http://38.64.72.148:80/hls/modn/list/4013/chunklist0.m3u8";
     	break; 
-			case 5:e="https://dai.google.com/linear/hls/event/5bqbG8j7T_6_qMONC1SDsg/master.m3u8";
+			case 5:e="http://38.64.72.148:80/hls/modn/list/4006/chunklist1.m3u8";
     	break; 
 			case 6:e="https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8";
     	break; 
@@ -192,13 +185,13 @@ document.getElementById("NU").innerHTML = g;
 	}
 	function i04(){
 	document.getElementById("NU").innerHTML =4;
-	myVideo.src ='https://dai2.xumo.com/amagi_hls_data_xumo1212A-redboxstingrayhotcountry/CDN/playlist.m3u8';
+	myVideo.src ='http://38.64.72.148:80/hls/modn/list/4013/chunklist0.m3u8';
  	myVideo.load();
 	myVideo.play();
 	}
 	function i05(){
 	document.getElementById("NU").innerHTML =5;
-	myVideo.src ='https://dai.google.com/linear/hls/event/5bqbG8j7T_6_qMONC1SDsg/master.m3u8';
+	myVideo.src ='http://38.64.72.148:80/hls/modn/list/4006/chunklist1.m3u8';
  	myVideo.load();
 	myVideo.play();
 	}
