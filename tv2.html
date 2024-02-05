@@ -87,13 +87,13 @@ li a:hover {
 <script>
 	function open(){
 	document.getElementById("NU").innerHTML =0;
-	document.getElementById("NU01").innerHTML =0;	
+	document.getElementById("NUA").innerHTML =0;	
 	}
 </script>
 	
 <script>
 function down(){ 
-var e,f,g,h,v1;
+var e,f,g,h,i,v1;
 v1= document.getElementById("myVideo");
 f = document.getElementById("NU").innerHTML;
 g = Number(f)-1;
@@ -119,14 +119,14 @@ document.getElementById("NU").innerHTML = g;
 	v1.src =e;
  	v1.load();
 	v1.play();
-	g=g+1;
-document.getElementById("NU01").innerHTML = g;	
+	i=g+1;
+document.getElementById("NUA").innerHTML = i;	
 } 
 </script>
 	
 <script>
 function up(){ 
-var e,f,g,h,v1;
+var e,f,g,h,i,v1;
 v1= document.getElementById("myVideo");
 f = document.getElementById("NU").innerHTML;
 g = Number(f)+1;
@@ -153,8 +153,8 @@ document.getElementById("NU").innerHTML = g;
         v1.src =e;
  	v1.load();
 	v1.play();
-	g=g+1;
-document.getElementById("NU01").innerHTML = g;
+	i=g+1;
+document.getElementById("NUA").innerHTML = i;
 } 
 </script>
 	
