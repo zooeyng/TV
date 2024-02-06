@@ -10,10 +10,8 @@ body {
 
 button {
 	text-align:center;
-	font-size:80px;
 	color: #FFFFFF;
-	font-weight:bold;
-	background-color: #FF66C4;
+    background-color: #FF66C4;
 }
 	
 p {
@@ -73,11 +71,13 @@ li a:hover {
   <li><a onclick="i10()">CNA</a></li>
   <li><a onclick="i11()">Fox News</a></li>	
 </ul>
+<input type="text" name="aa" id="link" style="height:50px; width:1100px;">
+<button type="button" style=" height: 50px; width: 120px; font-size:30px;" onclick="go()">GO</button>
 </div>
 
 <div
 <span id="NU" style="color:#000000;"></span>
-</div>	
+</div>
 
 <div id="content" style="background-color:#000000; height:800px; width:1280px; float:left;" align="center">	
 <video id="myVideo" class="video-js vjs-default-skin" controls preload="auto" width="1250" height="703" data-setup='{}'>
@@ -86,10 +86,9 @@ li a:hover {
 </div>
 
 <div id="footer" style="background-color:#000000;clear:both;text-align:center; width:1280px;" align="center">		
-<button style=" height: 200px; width: 250px; " onclick="up()">CH  +</button>
-	
+<button style=" height: 200px; width: 250px; font-size:80px;" onclick="up()">CH  +</button>
 <td><p id="NUA"></p></td>
-<button style=" height: 200px; width: 250px; " onclick="down()">CH  -</button>
+<button style=" height: 200px; width: 250px; font-size:80px;" onclick="down()">CH  -</button>
 </div>
 
 <script>
@@ -99,6 +98,15 @@ li a:hover {
 	myVideo.load();
 	myVideo.play();
 	}
+</script>
+
+<script>
+function go() {
+	var a,b,c;
+  a = document.getElementById('link').value;
+  document.getElementById("NUA").innerHTML=a;
+
+}
 </script>
 	
 <script>
