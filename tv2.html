@@ -71,7 +71,7 @@ li a:hover {
   <li><a onclick="i10()">CNA</a></li>
   <li><a onclick="i11()">Fox News</a></li>	
 </ul>
-<input type="text" name="aa" id="link" style="height:50px; width:1100px;">
+<input type="text" name="aa" id="link" style="height:50px; width:1000px;font-size:20px;">
 <button type="button" style=" height: 50px; width: 120px; font-size:30px;" onclick="go()">GO</button>
 </div>
 
@@ -102,10 +102,13 @@ li a:hover {
 
 <script>
 function go() {
-	var a,b,c;
+	var a,b,c,v1;
   a = document.getElementById('link').value;
-  document.getElementById("NUA").innerHTML=a;
-
+  v1= document.getElementById("myVideo");
+	document.getElementById("NUA").innerHTML='TEST';
+  v1.src =a;
+ 	v1.load();
+	v1.play();
 }
 </script>
 	
