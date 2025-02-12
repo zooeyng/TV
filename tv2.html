@@ -54,7 +54,7 @@ li a:hover {
 	
 <body onload="open()">
 
-<div id="header" style="height:480px;width:1280px;" align="center">
+<div id="header" style="height:560px;width:1280px;" align="center">
 <ul>
   <li><a class="active" onclick="i00()">澳視澳門</a></li>
   <li><a onclick="i01()">澳門資訊</a></li>
@@ -71,10 +71,10 @@ li a:hover {
   <li><a onclick="i10()">翡翠综合</a></li>
   <li><a onclick="i11()">娛樂新聞</a></li>	
 
-  <li><a onclick="i08()">myTV SUPER</a></li>
-  <li><a onclick="i09()">翡翠剧集</a></li>
-  <li><a onclick="i10()">中天亞洲</a></li>
-  <li><a onclick="i11()">寰宇新聞</a></li>
+  <li><a onclick="i12()">SUPER</a></li>
+  <li><a onclick="i13()">翡翠剧集</a></li>
+  <li><a onclick="i14()">中天亞洲</a></li>
+  <li><a onclick="i15()">寰宇新聞</a></li>
 </ul>
 <input type="text" name="aa" id="link" style="height:70px; width:1000px;font-size:33px;">
 <button type="button" style=" height: 70px; width: 120px; font-size:40px;" onclick="go()">GO</button>
@@ -91,9 +91,13 @@ li a:hover {
 </div>
 
 <div id="footer" style="background-color:#000000;clear:both;text-align:center; width:1280px;" align="center">		
-<button style=" height: 120px; width: 250px; font-size:50px;" onclick="up()">CH  +</button>
-<td><p id="NUA"></p></td>
-<button style=" height: 120px; width: 250px; font-size:50px;" onclick="down()">CH  -</button>
+<table border="1">
+<tr>
+  <td><button style=" height: 100px; width: 200px; font-size:50px;" onclick="up()">CH  +</button></td>
+  <td><p id="NUA"></p></td>
+  <td><button style=" height: 100px; width: 200px; font-size:50px;" onclick="down()">CH  -</button></td>
+</tr>
+</table>
 </div>
 
 <script>
