@@ -1,0 +1,452 @@
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>TV</title>
+	
+<style>
+body {
+	background-color:#000000;
+}
+
+button {
+	text-align:center;
+	color: #FFFFFF;
+    background-color: #FF66C4;
+}
+	
+p {
+	text-align:center;
+	font-size:80px;
+    color:#FF66C4;
+	padding:25px;
+	font-weight:bold;
+}
+	
+ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     background-color: #999;
+     overflow: hidden;
+     
+ }
+
+ li {
+     float: left;
+ }
+
+ li a {
+     color: white;
+     padding: 14px 16px;
+     display: inline-block;
+     text-decoration: none;
+ }
+
+ li>a.active {
+     background-color: green;
+ }
+
+ li>a:hover:not(a.active),
+ .dropbtn:hover {
+     background-color: #555;
+ }
+
+ .dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     min-width: 100px;
+     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+ }
+
+ .dropdown-content a {
+     color: black;
+     display: block;
+ }
+
+ .dropdown-content a:hover {
+     background-color: #f1f1f1;
+     color: deepskyblue;
+ }
+
+ .dropdown:hover .dropdown-content {
+     display: block;
+ }
+	
+	
+</style>
+</head>
+	
+<body onload="open()">
+
+<div id="header" style="height:350px;width:1280px;" align="center">
+
+
+
+<ul>
+
+    <li>
+        <div class="dropdown"> <a href="#" class="dropbtn">電視</a>
+            <div class="dropdown-content">
+              <a onclick="i00()">澳門澳門</a>
+              <a onclick="i01()">澳門資訊</a> 
+              <a onclick="i02()">澳門體育</a> 
+              <a onclick="i03()">澳門綜藝</a> 
+              
+            </div>
+        </div>
+    </li>
+
+  <li><a class="active" onclick="i00()">澳視澳門</a></li>
+  <li><a onclick="i01()">澳門資訊</a></li>
+  <li><a onclick="i02()">澳門體育</a></li>
+  <li><a onclick="i03()">澳門綜藝</a></li>
+ 
+  <li><a onclick="i04()">澳門衛星</a></li>
+  <li><a onclick="i05()">FM 100.7</a></li>
+  <li><a onclick="i06()">FM 98</a></li>
+  <li><a onclick="i07()">翡翠台</a></li>
+
+  <li><a onclick="i08()">無線新聞</a></li>
+  <li><a onclick="i09()">TVB Plus</a></li>
+  <li><a onclick="i10()">翡翠综合</a></li>
+  <li><a onclick="i11()">娛樂新聞</a></li>	
+
+  <li><a onclick="i12()">SUPER</a></li>
+  <li><a onclick="i13()">翡翠剧集</a></li>
+  <li><a onclick="i14()">美亞電影</a></li>
+  <li><a onclick="i15()">東森新聞</a></li>
+</ul>
+<input type="text" name="aa" id="link" style="height:70px; width:1000px;font-size:33px;">
+<button type="button" style=" height: 70px; width: 120px; font-size:40px;" onclick="go()">GO</button>
+</div>
+
+<div
+<span id="NU" style="color:#000000;"></span>
+</div>
+
+<div id="content" style="background-color:#000000; height:800px; width:1280px; float:left;" align="center">	
+<video id="myVideo" class="video-js vjs-default-skin" controls preload="auto" width="1250" height="703" data-setup='{}'>
+<source src="https://locallive.tdm.com.mo/ch1/ch1.live/playlist.m3u8" type="application/x-mpegURL">
+</video>
+</div>
+
+<div id="footer" style="background-color:#000000;clear:both;text-align:center; width:1280px;" align="center">		
+<table border="0">
+<tr>
+  <td style="width: 250px;"></td>
+  <td><button style=" height: 100px; width: 200px; font-size:50px;" onclick="down()">CH  -</button></td>
+  <td><p id="NUA"></p></td>
+  <td><button style=" height: 100px; width: 200px; font-size:50px;" onclick="up()">CH  +</button></td>
+</tr>
+</table>
+</div>
+
+<script>
+	function open(){
+	document.getElementById("NU").innerHTML =0;
+	document.getElementById("NUA").innerHTML ='澳視澳門';
+	myVideo.load();
+	myVideo.play();
+	}
+</script>
+
+<script>
+function go() {
+	var a,b,c,v1;
+  a = document.getElementById('link').value;
+  v1= document.getElementById("myVideo");
+	document.getElementById("NUA").innerHTML='TEST';
+  v1.src =a;
+ 	v1.load();
+	v1.play();
+}
+</script>
+	
+<script>
+function down(){ 
+var e,f,g,h,i,v1;
+v1= document.getElementById("myVideo");
+f = document.getElementById("NU").innerHTML;
+g = Number(f)-1;
+document.getElementById("NU").innerHTML = g;
+	switch (g){
+  		        case 0:e="https://locallive.tdm.com.mo/ch1/ch1.live/playlist.m3u8";
+    	break;
+			case 1:e="https://live3.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8";
+    	break; 
+			case 2:e="https://live3.tdm.com.mo/ch4/sport_ch4.live/playlist.m3u8";
+    	break; 
+			case 3:e="https://live3.tdm.com.mo/ch6/hd_ch6.live/chunklist_w1161349884.m3u8";
+    	break; 
+			case 4:e="https://live3.tdm.com.mo/ch3/ch3.live/chunklist_w1780841035.m3u8";
+    	break; 
+			case 5:e="https://live3.tdm.com.mo/live/rch2.live/chunklist_w129550018.m3u8";
+    	break; 
+			case 6:e="https://live3.tdm.com.mo/live/rch1.live/chunklist_w506359701.m3u8";
+    	break; 
+			case 7:e="http://aktv.top/AKTV/live/aktv/null/AKTV.m3u8";
+    	break; 
+			case 8:e="http://aktv.top/AKTV/live/aktv/null-1/AKTV.m3u8";
+    	break; 
+			case 9:e="http://aktv.top/AKTV/live/aktv/tvbplus/AKTV.m3u8";
+    	break; 
+			case 10:e="http://aktv.top/AKTV/live/aktv/null-17/AKTV.m3u8";
+    	break; 
+			case 11:e="http://aktv.top/AKTV/live/aktv/hk/AKTV.m3u8";
+    	break; 
+			case 12:e="http://aktv.top/AKTV/live/aktv/mytvsuper18/AKTV.m3u8";
+    	break; 
+			case 13:e="http://aktv.top/AKTV/live/aktv/null-18/AKTV.m3u8";
+    	break; 
+			case 14:e="http://aktv.top/AKTV/live/aktv/hk-1/AKTV.m3u8";
+    	break; 
+			case 15:e="http://aktv.top/AKTV/live/aktv2/null/AKTV.m3u8";
+    	break; 
+ 	}
+
+	switch (g){
+  		        case 0:i="澳視澳門";
+    	break;
+			case 1:i="澳門資訊";
+    	break; 
+			case 2:i="澳門體育";
+    	break; 
+			case 3:i="澳門綜藝";
+    	break; 
+			case 4:i="澳門衛星";
+    	break; 
+			case 5:i="FM 100.7";
+    	break; 
+			case 6:i="FM 98";
+    	break; 
+			case 7:i="翡翠台";
+    	break; 
+			case 8:i="無線新聞";
+    	break; 
+			case 9:i="TVB Plus";
+    	break; 
+			case 10:i="翡翠综合";
+    	break; 
+			case 11:i="娛樂新聞";
+    	break;
+			case 12:i="myTV SUPER";
+    	break; 
+			case 13:i="翡翠剧集";
+    	break; 
+			case 14:i="美亞電影";
+    	break; 
+			case 15:i="東森新聞";
+    	break;
+			} 
+	v1.src =e;
+ 	v1.load();
+	v1.play();
+	document.getElementById("NUA").innerHTML =i;
+} 
+</script>
+	
+<script>
+function up(){ 
+var e,f,g,h,i,v1;
+v1= document.getElementById("myVideo");
+f = document.getElementById("NU").innerHTML;
+g = Number(f)+1;
+document.getElementById("NU").innerHTML = g;
+	
+switch (g){
+  		        case 0:e="https://locallive.tdm.com.mo/ch1/ch1.live/playlist.m3u8";
+    	break;
+			case 1:e="https://live3.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8";
+    	break; 
+			case 2:e="https://live3.tdm.com.mo/ch4/sport_ch4.live/playlist.m3u8";
+    	break; 
+			case 3:e="https://live3.tdm.com.mo/ch6/hd_ch6.live/chunklist_w1161349884.m3u8";
+    	break; 
+			case 4:e="https://live3.tdm.com.mo/ch3/ch3.live/chunklist_w1780841035.m3u8";
+    	break; 
+			case 5:e="https://live3.tdm.com.mo/live/rch2.live/chunklist_w129550018.m3u8";
+    	break; 
+			case 6:e="https://live3.tdm.com.mo/live/rch1.live/chunklist_w506359701.m3u8";
+    	break; 
+			case 7:e="http://aktv.top/AKTV/live/aktv/null/AKTV.m3u8";
+    	break; 
+			case 8:e="http://aktv.top/AKTV/live/aktv/null-1/AKTV.m3u8";
+    	break; 
+			case 9:e="http://aktv.top/AKTV/live/aktv/tvbplus/AKTV.m3u8";
+    	break; 
+			case 10:e="http://aktv.top/AKTV/live/aktv/null-17/AKTV.m3u8";
+    	break; 
+			case 11:e="http://aktv.top/AKTV/live/aktv/hk/AKTV.m3u8";
+    	break; 
+			case 12:e="http://aktv.top/AKTV/live/aktv/mytvsuper18/AKTV.m3u8";
+    	break; 
+			case 13:e="http://aktv.top/AKTV/live/aktv/null-18/AKTV.m3u8";
+    	break; 
+			case 14:e="http://aktv.top/AKTV/live/aktv/hk-1/AKTV.m3u8";
+    	break; 
+			case 15:e="http://aktv.top/AKTV/live/aktv2/null/AKTV.m3u8";
+    	break; 
+ 	}
+
+	switch (g){
+  		        case 0:i="澳視澳門";
+    	break;
+			case 1:i="澳門資訊";
+    	break; 
+			case 2:i="澳門體育";
+    	break; 
+			case 3:i="澳門綜藝";
+    	break; 
+			case 4:i="澳門衛星";
+    	break; 
+			case 5:i="FM 100.7";
+    	break; 
+			case 6:i="FM 98";
+    	break; 
+			case 7:i="翡翠台";
+    	break; 
+			case 8:i="無線新聞";
+    	break; 
+			case 9:i="TVB Plus";
+    	break; 
+			case 10:i="翡翠综合";
+    	break; 
+			case 11:i="娛樂新聞";
+    	break;
+			case 12:i="myTV SUPER";
+    	break; 
+			case 13:i="翡翠剧集";
+    	break; 
+			case 14:i="美亞電影";
+    	break; 
+			case 15:i="東森新聞";
+    	break;
+			}
+  
+	
+        v1.src =e;
+ 	v1.load();
+	v1.play();
+document.getElementById("NUA").innerHTML =i;
+} 
+</script>
+	
+<script>
+	function i00(){
+	document.getElementById("NU").innerHTML =0;
+	document.getElementById("NUA").innerHTML='澳視澳門';
+	myVideo.src ='https://locallive.tdm.com.mo/ch1/ch1.live/playlist.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i01(){
+	document.getElementById("NU").innerHTML =1;
+		document.getElementById("NUA").innerHTML='澳門資訊';
+	myVideo.src ='https://live3.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i02(){
+	document.getElementById("NU").innerHTML =2;
+		document.getElementById("NUA").innerHTML='澳門體育';
+	myVideo.src ='https://live3.tdm.com.mo/ch4/sport_ch4.live/playlist.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i03(){
+	document.getElementById("NU").innerHTML =3;
+		document.getElementById("NUA").innerHTML='澳門綜藝';
+	myVideo.src ='https://live3.tdm.com.mo/ch6/hd_ch6.live/chunklist_w1161349884.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i04(){
+	document.getElementById("NU").innerHTML =4;
+		document.getElementById("NUA").innerHTML='澳門衛星';
+	myVideo.src ='https://live3.tdm.com.mo/ch3/ch3.live/chunklist_w1780841035.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i05(){
+	document.getElementById("NU").innerHTML =5;
+		document.getElementById("NUA").innerHTML='FM 100.7';
+	myVideo.src ='https://live3.tdm.com.mo/live/rch2.live/chunklist_w129550018.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i06(){
+	document.getElementById("NU").innerHTML =6;
+		document.getElementById("NUA").innerHTML='FM 98';
+	myVideo.src ='https://live3.tdm.com.mo/live/rch1.live/chunklist_w506359701.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i07(){
+	document.getElementById("NU").innerHTML =7;
+		document.getElementById("NUA").innerHTML='翡翠台';
+	myVideo.src ='http://aktv.top/AKTV/live/aktv/null/AKTV.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i08(){
+	document.getElementById("NU").innerHTML =8;
+		document.getElementById("NUA").innerHTML='無線新聞';
+	myVideo.src ='http://aktv.top/AKTV/live/aktv/null-1/AKTV.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i09(){
+	document.getElementById("NU").innerHTML =9;
+		document.getElementById("NUA").innerHTML='TVB Plus';
+	myVideo.src ='http://aktv.top/AKTV/live/aktv/tvbplus/AKTV.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i10(){
+	document.getElementById("NU").innerHTML =10;
+		document.getElementById("NUA").innerHTML='翡翠综合';
+	myVideo.src ='http://aktv.top/AKTV/live/aktv/null-17/AKTV.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i11(){
+	document.getElementById("NU").innerHTML =11;
+		document.getElementById("NUA").innerHTML='娛樂新聞';
+	myVideo.src ='http://aktv.top/AKTV/live/aktv/hk/AKTV.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i12(){
+	document.getElementById("NU").innerHTML =12;
+		document.getElementById("NUA").innerHTML='myTV SUPER';
+	myVideo.src ='http://aktv.top/AKTV/live/aktv/mytvsuper18/AKTV.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i13(){
+	document.getElementById("NU").innerHTML =13;
+		document.getElementById("NUA").innerHTML='翡翠剧集';
+	myVideo.src ='http://aktv.top/AKTV/live/aktv/null-18/AKTV.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i14(){
+	document.getElementById("NU").innerHTML =14;
+		document.getElementById("NUA").innerHTML='美亞電影';
+	myVideo.src ='http://aktv.top/AKTV/live/aktv/hk-1/AKTV.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+	function i15(){
+	document.getElementById("NU").innerHTML =15;
+		document.getElementById("NUA").innerHTML='東森新聞';
+	myVideo.src ='http://aktv.top/AKTV/live/aktv2/null/AKTV.m3u8';
+ 	myVideo.load();
+	myVideo.play();
+	}
+</script>
+	
+</body>
+</html>
+
