@@ -26,7 +26,7 @@ ul {
      list-style-type: none;
      margin: 0;
      padding: 0;
-     background-color: #999;
+     background-color: #000000;
      overflow: hidden;
      
  }
@@ -36,10 +36,13 @@ ul {
  }
 
  li a {
-     color: white;
+     color: #80F0FF;
      padding: 14px 16px;
      display: inline-block;
+     font-size:40px;
      text-decoration: none;
+     height:40px;
+     width:170px;
  }
 
  li>a.active {
@@ -60,13 +63,14 @@ ul {
  }
 
  .dropdown-content a {
-     color: black;
+background-color: #333;     
+color: #80F0FF;
      display: block;
  }
 
  .dropdown-content a:hover {
-     background-color: #f1f1f1;
-     color: deepskyblue;
+     background-color: #555;
+     color: #FF66C4;
  }
 
  .dropdown:hover .dropdown-content {
@@ -79,44 +83,82 @@ ul {
 	
 <body onload="open()">
 
-<div id="header" style="height:350px;width:1280px;" align="center">
+<div id="header" style="height:400px;width:1280px;" align="center">
 
 
 
 <ul>
 
     <li>
-        <div class="dropdown"> <a href="#" class="dropbtn">電視</a>
+        <div class="dropdown"> <a href="#" class="dropbtn">TDM</a>
             <div class="dropdown-content">
-              <a onclick="i00()">澳門澳門</a>
-              <a onclick="i01()">澳門資訊</a> 
+              <a onclick="i00()">澳視澳門</a>
               <a onclick="i02()">澳門體育</a> 
               <a onclick="i03()">澳門綜藝</a> 
+              <a onclick="i01()">澳門衛星</a> 
+              <a onclick="i02()">中文電台</a> 
+              <a onclick="i03()">葡文電台</a>
               
             </div>
         </div>
     </li>
 
-  <li><a class="active" onclick="i00()">澳視澳門</a></li>
-  <li><a onclick="i01()">澳門資訊</a></li>
-  <li><a onclick="i02()">澳門體育</a></li>
-  <li><a onclick="i03()">澳門綜藝</a></li>
- 
-  <li><a onclick="i04()">澳門衛星</a></li>
-  <li><a onclick="i05()">FM 100.7</a></li>
-  <li><a onclick="i06()">FM 98</a></li>
-  <li><a onclick="i07()">翡翠台</a></li>
+    <li>
+        <div class="dropdown"> <a href="#" class="dropbtn">TVB</a>
+            <div class="dropdown-content">
+              <a onclick="i00()">翡翠台</a>
+              <a onclick="i01()">Plus台</a> 
+              <a onclick="i02()">翡翠综合</a> 
+              <a onclick="i03()">翡翠剧集</a>
+              <a onclick="i03()">千禧經典</a> 
+              <a onclick="i01()">娛樂新聞</a> 
+       
+            </div>
+        </div>
+    </li>
 
-  <li><a onclick="i08()">無線新聞</a></li>
-  <li><a onclick="i09()">TVB Plus</a></li>
-  <li><a onclick="i10()">翡翠综合</a></li>
-  <li><a onclick="i11()">娛樂新聞</a></li>	
+    <li>
+        <div class="dropdown"> <a href="#" class="dropbtn">新聞</a>
+            <div class="dropdown-content">
+              <a onclick="i00()">澳門資訊</a>
+              <a onclick="i01()">無線新聞</a> 
+              <a onclick="i02()">東森新聞</a> 
+              <a onclick="i03()">中天新聞</a> 
+              <a onclick="i03()">寰宇新聞</a>
+              <a onclick="i01()">TVBS</a> 
+              <a onclick="i02()">鳳凰中文</a> 
+              <a onclick="i03()">娛樂新聞</a> 
+              <a onclick="i03()">鳳凰資訊</a>
+              <a onclick="i01()">鳳凰香港</a>
+       
+            </div>
+        </div>
+    </li>
 
-  <li><a onclick="i12()">SUPER</a></li>
-  <li><a onclick="i13()">翡翠剧集</a></li>
-  <li><a onclick="i14()">美亞電影</a></li>
-  <li><a onclick="i15()">東森新聞</a></li>
+    <li>
+        <div class="dropdown"> <a href="#" class="dropbtn">電影</a>
+            <div class="dropdown-content">
+              <a onclick="i00()">美亞電影</a>
+              <a onclick="i01()">PopC</a> 
+              <a onclick="i02()">KIX</a> 
+              <a onclick="i03()">AXN</a> 
+              <a onclick="i03()">ROCK</a>
+              <a onclick="i01()">CNA</a> 
+              <a onclick="i02()">BBC</a> 
+              <a onclick="i03()">Fox</a> 
+              <a onclick="i03()">GBNEWS</a>
+              <a onclick="i01()">ABCNEWS</a>
+       
+            </div>
+        </div>
+    </li>
+
 </ul>
+
+<div
+<span id="NU" style="color:#000000;"></span>
+</div>
+
 <input type="text" name="aa" id="link" style="height:70px; width:1000px;font-size:33px;">
 <button type="button" style=" height: 70px; width: 120px; font-size:40px;" onclick="go()">GO</button>
 </div>
@@ -125,13 +167,7 @@ ul {
 <span id="NU" style="color:#000000;"></span>
 </div>
 
-<div id="content" style="background-color:#000000; height:800px; width:1280px; float:left;" align="center">	
-<video id="myVideo" class="video-js vjs-default-skin" controls preload="auto" width="1250" height="703" data-setup='{}'>
-<source src="https://locallive.tdm.com.mo/ch1/ch1.live/playlist.m3u8" type="application/x-mpegURL">
-</video>
-</div>
-
-<div id="footer" style="background-color:#000000;clear:both;text-align:center; width:1280px;" align="center">		
+<div id="content" style="background-color:#000000;clear:both;text-align:center; width:1280px;" align="center">		
 <table border="0">
 <tr>
   <td style="width: 250px;"></td>
@@ -141,6 +177,13 @@ ul {
 </tr>
 </table>
 </div>
+
+<div id="footer" style="background-color:#000000; height:800px; width:1280px; float:left;" align="center">	
+<video id="myVideo" class="video-js vjs-default-skin" controls preload="auto" width="1250" height="703" data-setup='{}'>
+<source src="https://locallive.tdm.com.mo/ch1/ch1.live/playlist.m3u8" type="application/x-mpegURL">
+</video>
+</div>
+
 
 <script>
 	function open(){
